@@ -15,7 +15,7 @@ class ThirdTests: XCTestCase {
   }
   
   func testsomechords () {
-    XCTAssertNil(Notes.DO, "Don't exists")
+    XCTAssertNotNil(chords.DOMISO, "Do exists")
    }
 
 }
