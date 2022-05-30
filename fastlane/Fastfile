@@ -5,10 +5,14 @@ platform :ios do
     setup_circle_ci
   end
 
+
+
+  platform :ios do
   desc "Runs all the tests"
   lane :test do
-    scan
+    run_tests(scheme: "Third.xcscheme")
   end
+
 
   desc "Ad-hoc build"
   lane :adhoc do
