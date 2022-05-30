@@ -8,6 +8,10 @@
 import Foundation
 
 enum Notes {
-  case DO, RE, ME, FA, SO, LA, TI
+  case DO, RE, MI, FA, SO, LA, TI
+}
+
+enum chords {
+  case DOMISO, MISOFA
 }
 

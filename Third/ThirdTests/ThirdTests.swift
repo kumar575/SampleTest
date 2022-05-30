@@ -11,7 +11,11 @@ import XCTest
 class ThirdTests: XCTestCase {
 
  func testsomething () {
-   XCTAssertNil(Notes.DO, "Do exists")
+   XCTAssertNotNil(Notes.DO, "Do exists")
   }
+  
+  func testsomechords () {
+    XCTAssertNil(Notes.DO, "Don't exists")
+   }
 
 }

@@ -1,0 +1,7 @@
+app_identifier("com.veena.ios.Third") # The bundle identifier of your app
+apple_id("avecutsav6@gmail.com") # Your Apple email address
+
+itc_team_id("1605382") # App Store Connect Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
