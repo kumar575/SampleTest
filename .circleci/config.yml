@@ -1,29 +1,13 @@
-version: 2.1
-jobs:
-  build-and-test:
-    macos:
-      xcode: 12.5.0
-    environment:
-      FL_OUTPUT_DIR: output
-      FASTLANE_LANE: test
-    steps:
-      - checkout
-      - run: bundle install
-      - run:
-          name: Fastlane
-          command: fastlane test
-      - store_artifacts:
-          path: output
-      - store_test_results:
-          path: output/scan
+default_platform :ios
 
+platform :ios do
+  before_all do
+    setup_circle_ci
+  end
 
+  desc "Runs all the tests"
+  lane :test do
+    scan
+  end
 
-workflows:
-  basic-workflow:
-    jobs:
-      - build-and-test:
-          filters:
-            branches:
-              ignore: main
-      
+end
