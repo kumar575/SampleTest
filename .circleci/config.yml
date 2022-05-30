@@ -17,22 +17,7 @@ jobs:
       - store_test_results:
           path: output/scan
 
-  build-and-test-and-notify:
-    macos:
-      xcode: 12.5.0
-    environment:
-      FL_OUTPUT_DIR: output
-      FASTLANE_LANE: test
-    steps:
-      - checkout
-      - run: bundle install
-      - run:
-          name: Fastlane
-          command: fastlane test_and_notify
-      - store_artifacts:
-          path: output
-      - store_test_results:
-          path: output/scan
+
 
 workflows:
   basic-workflow:
