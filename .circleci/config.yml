@@ -41,7 +41,4 @@ workflows:
           filters:
             branches:
               ignore: main
-      - build-and-test-and-notify:
-          filters:
-            branches:
-              only: main
+      
